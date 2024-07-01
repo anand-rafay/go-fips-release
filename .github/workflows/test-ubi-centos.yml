@@ -111,6 +111,7 @@ jobs:
         shell: bash
         run: |
           cd $GITHUB_WORKSPACE/..
+          fips-mode-setup --check
           pwd
           ls -Al *
           if 2>/dev/null cat go/.gitmodules | grep -q "url = https://github.com/golang/go.git"; then
